@@ -1,0 +1,51 @@
+seed  2023
+ratio  70
+data_name  concrete
+Loaded dataset 'concrete'.
+Data size: train and calibration (824, 8), test (206, 8)
+
+[R] data_name: concrete 
+[R] seed: 2023 
+[R] ratio: 70 
+
+Local  contrast tree:
+node 3  var     dir    split 
+          3      +      1.1 
+node 4  var     dir    split 
+          3      -      1.1 
+          7      -      -0.038 
+node 5  var     dir    split 
+          3      -      1.1 
+          7      +      -0.038 
+
+Starting cross-validation for optimal number of boosting rounds...
+Fold 0 completed.
+Fold 1 completed.
+Cross Validation completed.
+Optimal boosting rounds:  9
+
+[R] data_name: concrete 
+[R] seed: 2023 
+[R] ratio: 70 
+
+Boosted  contrast tree:
+node 3  var     dir    split 
+          3      +      1.1 
+node 4  var     dir    split 
+          3      -      1.1 
+          6      -      -0.39 
+node 5  var     dir    split 
+          3      -      1.1 
+          6      +      -0.39 
+
+Results:
+ {'boosted_wt': [50, 63, 93], 'boosted_max_condcov_dev': 0.1, 'boosted_len': 1.1100836474387923, 'boosted_cov': 0.8980582524271845, 'boosted_condcov_group': (0.8, 0.9682539682539683, 0.9032258064516129), 'boosted_condcov_group_node': (3, 4, 5), 'conv': 0.18, 'local_cov': 0.8883495145631068, 'local_len': 1.0981257989567041, 'local_max_condcov_dev': 0.16, 'local_condcov_group': (0.74, 0.9620253164556962, 0.9090909090909091), 'local_condcov_group_node': (3, 4, 5), 'local_wt': [50, 79, 77]}
+
+Baseline Local Procedure:
+Miscoverage rates at each leaf node of the contrast tree (%):  [26.0, 3.8, 9.1]
+Size of each leaf node of the contrast tree (%):  [24, 38, 38]
+
+Boosted Procedure:
+Miscoverage rates at each leaf node of the contrast tree (%):  [20.0, 3.2, 9.7]
+Size of each leaf node of the contrast tree (%):  [24, 31, 45]
+--- runtime: 2.832406489054362 minues ---
