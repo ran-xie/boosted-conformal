@@ -131,9 +131,6 @@ def gradient_boost_len(X_train, y_train, X_cal, y_cal, X_test, y_test,
                                   evals_result=results_mu,
                                   verbose_eval=verbose_mu)
         return bst_coord_mu, results_mu
-        mu_train = mu_train + bst_coord_mu.predict(xgb.DMatrix(X_train))
-        mu_cal = mu_cal +  bst_coord_mu.predict(dcal)
-        mu_test = mu_test +  bst_coord_mu.predict(dtest)
     
    
    
