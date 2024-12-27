@@ -205,7 +205,7 @@ def rounding(numbers):
     sum_rounded = sum(rounded_numbers)
     difference = 100 - sum_rounded
 
-        sorted_indices = sorted(range(len(numbers)), key=lambda i: -abs(numbers[i] - rounded_numbers[i]))
+    sorted_indices = sorted(range(len(numbers)), key=lambda i: -abs(numbers[i] - rounded_numbers[i]))
 
     adjusted_numbers = rounded_numbers.copy()
     for i in range(abs(difference)):
